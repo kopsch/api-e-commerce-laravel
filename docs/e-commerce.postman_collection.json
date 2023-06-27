@@ -1,0 +1,2500 @@
+{
+	"info": {
+		"_postman_id": "790fdead-2268-4419-881f-063134afd715",
+		"name": "e-commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22212644"
+	},
+	"item": [
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "[CREATE] Orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Order #001\",\r\n    \"status\": 1,\r\n    \"order_date\": \"2023-06-20 20:00:00\",\r\n    \"product_id\": \"73613c6e-c550-40d5-b12b-a9ee88223b3d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/orders",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[CREATE] Orders",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Order #001\",\r\n    \"status\": 1,\r\n    \"order_date\": \"2023-06-20 20:00:00\",\r\n    \"product_id\": \"73613c6e-c550-40d5-b12b-a9ee88223b3d\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}/api/orders",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 19:31:48 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 19:31:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Pedido criado.\",\n    \"data\": {\n        \"name\": \"Order #001\",\n        \"product_id\": 1,\n        \"status\": 1,\n        \"order_date\": \"2023-06-20 20:00:00\",\n        \"user_id\": 1,\n        \"uuid\": \"e292f87e-f1da-4977-ad46-803dc0a11826\",\n        \"updated_at\": \"2023-06-27T19:31:47.000000Z\",\n        \"created_at\": \"2023-06-27T19:31:47.000000Z\",\n        \"id\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "[CREATE] Orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Order #0001\",\r\n    \"status\": 2,\r\n    \"order_date\": \"2023-06-20 21:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/orders/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "e292f87e-f1da-4977-ad46-803dc0a11826"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[CREATE] Orders",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Order #0001\",\r\n    \"status\": 2,\r\n    \"order_date\": \"2023-06-20 21:00:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}/api/orders/:id",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "e292f87e-f1da-4977-ad46-803dc0a11826"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 19:36:02 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 19:36:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Pedido atualizado.\",\n    \"data\": {\n        \"id\": 1,\n        \"uuid\": \"e292f87e-f1da-4977-ad46-803dc0a11826\",\n        \"user_id\": 1,\n        \"product_id\": 1,\n        \"name\": \"Order #0001\",\n        \"order_date\": \"2023-06-20 20:00:00\",\n        \"status\": 2,\n        \"created_at\": \"2023-06-27T19:31:47.000000Z\",\n        \"updated_at\": \"2023-06-27T19:36:02.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "[GET] Orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path}}/api/orders",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[GET] Orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{path}}/api/orders",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 19:36:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 19:36:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"uuid\": \"e292f87e-f1da-4977-ad46-803dc0a11826\",\n            \"user_id\": 1,\n            \"product_id\": 1,\n            \"name\": \"Order #0001\",\n            \"order_date\": \"2023-06-20 20:00:00\",\n            \"status\": 2,\n            \"created_at\": \"2023-06-27T19:31:47.000000Z\",\n            \"updated_at\": \"2023-06-27T19:36:02.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"uuid\": \"3af4fd51-0b88-4e2a-8b96-32c41b0012af\",\n            \"user_id\": 1,\n            \"product_id\": 1,\n            \"name\": \"Order #002\",\n            \"order_date\": \"2023-06-20 20:00:00\",\n            \"status\": 1,\n            \"created_at\": \"2023-06-27T19:36:30.000000Z\",\n            \"updated_at\": \"2023-06-27T19:36:30.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "[DETAIL] Orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path}}/api/orders/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "e292f87e-f1da-4977-ad46-803dc0a11826"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[DETAIL] Orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{path}}/api/orders/:id",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "e292f87e-f1da-4977-ad46-803dc0a11826"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 19:36:41 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 19:36:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"uuid\": \"e292f87e-f1da-4977-ad46-803dc0a11826\",\n        \"user_id\": 1,\n        \"product_id\": 1,\n        \"name\": \"Order #0001\",\n        \"order_date\": \"2023-06-20 20:00:00\",\n        \"status\": 2,\n        \"created_at\": \"2023-06-27T19:31:47.000000Z\",\n        \"updated_at\": \"2023-06-27T19:36:02.000000Z\",\n        \"product\": {\n            \"id\": 1,\n            \"uuid\": \"73613c6e-c550-40d5-b12b-a9ee88223b3d\",\n            \"name\": \"Guitarra Elétrica Gibson Les Paul\",\n            \"description\": \"A lendária guitarra elétrica Gibson Les Paul. Possui corpo em mogno e tampo em maple, proporcionando um timbre encorpado e sustain prolongado.\",\n            \"price\": 1999.99,\n            \"stock\": 10,\n            \"image\": \"https://images-americanas.b2w.io/produtos/01/00/sku/9416/2/9416295_1GG.jpg\",\n            \"category_id\": 1,\n            \"created_at\": \"2023-06-27T14:48:19.000000Z\",\n            \"updated_at\": \"2023-06-27T14:48:19.000000Z\",\n            \"category\": {\n                \"id\": 1,\n                \"uuid\": \"92df7059-3bca-4713-a9dd-c572f84dc359\",\n                \"name\": \"Guitarras\",\n                \"description\": \"Categoria que inclui guitarras elétricas e acústicas.\",\n                \"created_at\": \"2023-06-27T14:48:19.000000Z\",\n                \"updated_at\": \"2023-06-27T14:48:19.000000Z\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "[DELETE] Orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path}}/api/orders/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "e292f87e-f1da-4977-ad46-803dc0a11826"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "[GET] Me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path}}/api/auth/me",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[GET] Me",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{path}}/api/auth/me",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:49:45 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:49:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Admin Teste\",\n    \"username\": \"administrator\",\n    \"email\": \"admin.test@teste.com\",\n    \"type\": \"admin\",\n    \"created_at\": \"2023-06-27T14:48:18.000000Z\",\n    \"updated_at\": \"2023-06-27T14:48:18.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "[POST] Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);",
+									"    var data = pm.response.json();",
+									"    if (data) {",
+									"        pm.environment.get(\"variable_key\");",
+									"        pm.globals.set(\"token\", data.access_token);",
+									"        pm.environment.set(\"token\", data.access_token);",
+									"    }",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"administrator\",\r\n    \"password\": \"teste1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/auth/login",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[POST] Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"administrator\",\r\n    \"password\": \"teste1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}/api/auth/login",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:48:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:48:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODc4NzczMjAsImV4cCI6MTY4Nzg4MDkyMCwibmJmIjoxNjg3ODc3MzIwLCJqdGkiOiJTeTE3Q0lwMnlLdTFHVmRpIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Xm81wM74hq2i2rKu6iInKiRnWMjyEsgGSeVO6xUa4YY\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600\n}"
+						}
+					]
+				},
+				{
+					"name": "[POST] Logout",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);",
+									"    var data = pm.response.json();",
+									"    if (data) {",
+									"        pm.environment.get(\"variable_key\");",
+									"        pm.globals.set(\"token\", data.access_token);",
+									"        pm.environment.set(\"token\", data.access_token);",
+									"    }",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"teste1\",\r\n    \"password\": \"teste1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/auth/logout",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Usuário Teste\",\r\n    \"username\": \"teste_usuario\",\r\n    \"email\": \"teste_usuario@teste.com\",\r\n    \"password\": \"teste1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/auth/register",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Edit User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ADMUDADO\",\r\n    \"username\": \"ADMUDADO\",\r\n    \"email\": \"ADMUDADO@teste.com\",\r\n    \"password\": \"teste123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/auth/edit",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Change User Type Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"admin\",\r\n    \"user_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/auth/change-type",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"change-type"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "[GET] Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/api/categories",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[GET] Categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{path}}/api/categories",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:50:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 14:50:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"uuid\": \"92df7059-3bca-4713-a9dd-c572f84dc359\",\n            \"name\": \"Guitarras\",\n            \"description\": \"Categoria que inclui guitarras elétricas e acústicas.\",\n            \"created_at\": \"2023-06-27T14:48:19.000000Z\",\n            \"updated_at\": \"2023-06-27T14:48:19.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"uuid\": \"6dd59e70-89f7-4315-9991-aee60c62cace\",\n            \"name\": \"Baixos\",\n            \"description\": \"Categoria que inclui baixos elétricos e acústicos.\",\n            \"created_at\": \"2023-06-27T14:48:19.000000Z\",\n            \"updated_at\": \"2023-06-27T14:48:19.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"uuid\": \"c9efc21a-db03-425c-b0c9-a6fa39e11a11\",\n            \"name\": \"Baterias\",\n            \"description\": \"Categoria que inclui baterias acústicas e eletrônicas.\",\n            \"created_at\": \"2023-06-27T14:48:19.000000Z\",\n            \"updated_at\": \"2023-06-27T14:48:19.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"uuid\": \"2dfb01a9-4a16-4f29-b8da-5948ea36a6f6\",\n            \"name\": \"Teclados\",\n            \"description\": \"Categoria que inclui teclados e pianos.\",\n            \"created_at\": \"2023-06-27T14:48:19.000000Z\",\n            \"updated_at\": \"2023-06-27T14:48:19.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/categories?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/categories?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/categories?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://127.0.0.1:8000/api/categories\",\n        \"per_page\": 10,\n        \"to\": 4,\n        \"total\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "[STORE] Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Triângulo\",\r\n  \"description\": \"O Triângulo ou ferrinhos é um instrumento musical idiofone de percussão direta feito de metal.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/categories/:id/products",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								":id",
+								"products"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[STORE] Categories",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Triângulo\",\r\n  \"description\": \"O Triângulo ou ferrinhos é um instrumento musical idiofone de percussão direta feito de metal.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}/api/categories/:id/products",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										":id",
+										"products"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 18:48:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 18:48:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Categoria criada\",\n    \"data\": {\n        \"name\": \"Triângulo\",\n        \"description\": \"O Triângulo ou ferrinhos é um instrumento musical idiofone de percussão direta feito de metal.\",\n        \"uuid\": \"f5157c2b-ff84-4e6d-a81c-aa1e4a77ada9\",\n        \"updated_at\": \"2023-06-27T18:48:38.000000Z\",\n        \"created_at\": \"2023-06-27T18:48:38.000000Z\",\n        \"id\": 5\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "[PUT] Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Triângulos\",\r\n  \"description\": \"Os Triângulos ou ferrinhos é um instrumento musical idiofone de percussão direta feito de metal.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/categories/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "f5157c2b-ff84-4e6d-a81c-aa1e4a77ada9",
+									"description": "UUID de Categoria"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[PUT] Categories",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Triângulos\",\r\n  \"description\": \"Os Triângulos ou ferrinhos é um instrumento musical idiofone de percussão direta feito de metal.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}/api/categories/:id",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "f5157c2b-ff84-4e6d-a81c-aa1e4a77ada9",
+											"description": "UUID de Categoria"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 18:50:01 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 18:50:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Categoria atualizada\",\n    \"data\": {\n        \"id\": 5,\n        \"uuid\": \"f5157c2b-ff84-4e6d-a81c-aa1e4a77ada9\",\n        \"name\": \"Triângulos\",\n        \"description\": \"Os Triângulos ou ferrinhos é um instrumento musical idiofone de percussão direta feito de metal.\",\n        \"created_at\": \"2023-06-27T18:48:38.000000Z\",\n        \"updated_at\": \"2023-06-27T18:50:01.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "[DELETE] Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path}}/api/categories/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "f5157c2b-ff84-4e6d-a81c-aa1e4a77ada9",
+									"description": "UUID de Categoria"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "[GET] Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path}}/api/categories/:id/products",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								":id",
+								"products"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "92df7059-3bca-4713-a9dd-c572f84dc359",
+									"description": "UUID de Categoria"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[GET] Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{path}}/api/categories/:id/products",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										":id",
+										"products"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "92df7059-3bca-4713-a9dd-c572f84dc359",
+											"description": "UUID de Categoria"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 15:46:09 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 15:46:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"uuid\": \"73613c6e-c550-40d5-b12b-a9ee88223b3d\",\n            \"name\": \"Guitarra Elétrica Gibson Les Paul\",\n            \"description\": \"A lendária guitarra elétrica Gibson Les Paul. Possui corpo em mogno e tampo em maple, proporcionando um timbre encorpado e sustain prolongado.\",\n            \"price\": 1999.99,\n            \"stock\": 10,\n            \"image\": \"https://images-americanas.b2w.io/produtos/01/00/sku/9416/2/9416295_1GG.jpg\",\n            \"category_id\": 1,\n            \"created_at\": \"2023-06-27T14:48:19.000000Z\",\n            \"updated_at\": \"2023-06-27T14:48:19.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"uuid\": \"dc8abb77-35f0-4136-a25d-0a1ced0e0821\",\n            \"name\": \"Guitarra Acústica Taylor 214ce\",\n            \"description\": \"A guitarra acústica Taylor 214ce possui tampo em spruce sólido, proporcionando um som brilhante e equilibrado. Perfeita para músicos que buscam um instrumento de alta qualidade.\",\n            \"price\": 1499.99,\n            \"stock\": 5,\n            \"image\": \"https://x5music.vteximg.com.br/arquivos/ids/183229-1920-1920/Violao-Taylor-214CE-Eletro-Acustico-Natural.jpg?v=637048517664800000\",\n            \"category_id\": 1,\n            \"created_at\": \"2023-06-27T14:48:19.000000Z\",\n            \"updated_at\": \"2023-06-27T14:48:19.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/categories/92df7059-3bca-4713-a9dd-c572f84dc359/products?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/categories/92df7059-3bca-4713-a9dd-c572f84dc359/products?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/categories/92df7059-3bca-4713-a9dd-c572f84dc359/products?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://127.0.0.1:8000/api/categories/92df7059-3bca-4713-a9dd-c572f84dc359/products\",\n        \"per_page\": 10,\n        \"to\": 2,\n        \"total\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "[STORE] Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Guitarra Semi-acústica Epiphone Sheraton II\",\r\n  \"description\": \"A guitarra semi-acústica Epiphone Sheraton II combina estilo e versatilidade. Possui corpo em maple laminado, captadores humbucker e um som rico e encorpado.\",\r\n  \"image\": \"https://d1z9meo96z0rqn.cloudfront.net/Custom/Content/Products/11/58/11585_guitarra-epiphone-semi-acustica-sheraton-ii-pro-vintage-sunburst-141675_l1_637782735891857295.jpg\",\r\n  \"price\": 1499.99,\r\n  \"stock\": 3,\r\n  \"category_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/products",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[STORE] Products",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Guitarra Semi-acústica Epiphone Sheraton II\",\r\n  \"description\": \"A guitarra semi-acústica Epiphone Sheraton II combina estilo e versatilidade. Possui corpo em maple laminado, captadores humbucker e um som rico e encorpado.\",\r\n  \"image\": \"https://d1z9meo96z0rqn.cloudfront.net/Custom/Content/Products/11/58/11585_guitarra-epiphone-semi-acustica-sheraton-ii-pro-vintage-sunburst-141675_l1_637782735891857295.jpg\",\r\n  \"price\": 1499.99,\r\n  \"stock\": 3,\r\n  \"category_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}/api/products",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 15:56:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 15:56:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Produto criado\",\n    \"data\": {\n        \"name\": \"Guitarra Semi-acústica Epiphone Sheraton II\",\n        \"description\": \"A guitarra semi-acústica Epiphone Sheraton II combina estilo e versatilidade. Possui corpo em maple laminado, captadores humbucker e um som rico e encorpado.\",\n        \"stock\": 3,\n        \"price\": 1499.99,\n        \"image\": \"https://d1z9meo96z0rqn.cloudfront.net/Custom/Content/Products/11/58/11585_guitarra-epiphone-semi-acustica-sheraton-ii-pro-vintage-sunburst-141675_l1_637782735891857295.jpg\",\n        \"category_id\": 1,\n        \"uuid\": \"e836fa5b-f52d-4d67-8c40-86aeefd3e2b6\",\n        \"updated_at\": \"2023-06-27T15:56:50.000000Z\",\n        \"created_at\": \"2023-06-27T15:56:50.000000Z\",\n        \"id\": 12\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "[PUT] Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Guitarra Semi-acústica Epiphone Sheraton\",\r\n  \"description\": \"A guitarra semi-acústica Epiphone Sheraton combina estilo e versatilidade. Possui corpo em maple laminado, captadores humbucker.\",\r\n  \"price\": 1399.99,\r\n  \"stock\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/products/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "24c2f03a-53c0-46c2-94f9-55c6f6531b4c",
+									"description": "UUID de Produto"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[PUT] Products",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Guitarra Semi-acústica Epiphone Sheraton\",\r\n  \"description\": \"A guitarra semi-acústica Epiphone Sheraton combina estilo e versatilidade. Possui corpo em maple laminado, captadores humbucker.\",\r\n  \"price\": 1399.99,\r\n  \"stock\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}/api/products/:id",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "e836fa5b-f52d-4d67-8c40-86aeefd3e2b6",
+											"description": "UUID de Produto"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 16:14:26 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 16:14:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Produto atualizado\",\n    \"data\": {\n        \"id\": 12,\n        \"uuid\": \"e836fa5b-f52d-4d67-8c40-86aeefd3e2b6\",\n        \"name\": \"Guitarra Semi-acústica Epiphone Sheraton\",\n        \"description\": \"A guitarra semi-acústica Epiphone Sheraton combina estilo e versatilidade. Possui corpo em maple laminado, captadores humbucker.\",\n        \"price\": 1399.99,\n        \"stock\": 2,\n        \"image\": \"https://d1z9meo96z0rqn.cloudfront.net/Custom/Content/Products/11/58/11585_guitarra-epiphone-semi-acustica-sheraton-ii-pro-vintage-sunburst-141675_l1_637782735891857295.jpg\",\n        \"category_id\": 1,\n        \"created_at\": \"2023-06-27T15:56:50.000000Z\",\n        \"updated_at\": \"2023-06-27T16:14:26.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "[DELETE] Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path}}/api/products/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "20ee9260-d69b-4074-9c75-fdb79136b62b",
+									"description": "UUID de Produto"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[DELETE] Products",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{path}}/api/products/:id",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "20ee9260-d69b-4074-9c75-fdb79136b62b",
+											"description": "UUID de Produto"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 16:17:43 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 16:17:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Produto deletado\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "[GET] Review by User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path}}/api/reviews",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"reviews"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[GET] Review By User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{path}}/api/reviews",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"reviews"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 22:15:19 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 22:15:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"uuid\": \"740ec7a8-6f54-4fee-84a2-154d6b8b9936\",\n            \"user_id\": 1,\n            \"product_id\": 1,\n            \"subject\": \"Boa\",\n            \"comment\": \"Gostei muito\",\n            \"rating\": 8.5,\n            \"created_at\": \"2023-06-27T22:03:42.000000Z\",\n            \"updated_at\": \"2023-06-27T22:03:42.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"uuid\": \"4594e971-6d70-47e4-9b22-ce49e229d95f\",\n            \"user_id\": 1,\n            \"product_id\": 1,\n            \"subject\": \"Ruim\",\n            \"comment\": \"Bleeeh ruim dimais\",\n            \"rating\": 3,\n            \"created_at\": \"2023-06-27T22:05:23.000000Z\",\n            \"updated_at\": \"2023-06-27T22:05:23.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "[GET] Review By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path}}/api/reviews/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"reviews",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "740ec7a8-6f54-4fee-84a2-154d6b8b9936"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[GET] Review By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{path}}/api/reviews/:id",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"reviews",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "740ec7a8-6f54-4fee-84a2-154d6b8b9936"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 22:14:16 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 22:14:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"uuid\": \"740ec7a8-6f54-4fee-84a2-154d6b8b9936\",\n        \"user_id\": 1,\n        \"product_id\": 1,\n        \"subject\": \"Boa\",\n        \"comment\": \"Gostei muito\",\n        \"rating\": 8.5,\n        \"created_at\": \"2023-06-27T22:03:42.000000Z\",\n        \"updated_at\": \"2023-06-27T22:03:42.000000Z\",\n        \"product\": {\n            \"id\": 1,\n            \"uuid\": \"73613c6e-c550-40d5-b12b-a9ee88223b3d\",\n            \"name\": \"Guitarra Elétrica Gibson Les Paul\",\n            \"description\": \"A lendária guitarra elétrica Gibson Les Paul. Possui corpo em mogno e tampo em maple, proporcionando um timbre encorpado e sustain prolongado.\",\n            \"price\": 1999.99,\n            \"stock\": 10,\n            \"image\": \"https://images-americanas.b2w.io/produtos/01/00/sku/9416/2/9416295_1GG.jpg\",\n            \"category_id\": 1,\n            \"created_at\": \"2023-06-27T14:48:19.000000Z\",\n            \"updated_at\": \"2023-06-27T14:48:19.000000Z\",\n            \"category\": {\n                \"id\": 1,\n                \"uuid\": \"92df7059-3bca-4713-a9dd-c572f84dc359\",\n                \"name\": \"Guitarras\",\n                \"description\": \"Categoria que inclui guitarras elétricas e acústicas.\",\n                \"created_at\": \"2023-06-27T14:48:19.000000Z\",\n                \"updated_at\": \"2023-06-27T14:48:19.000000Z\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "[GET] Reviews by Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path}}/api/reviews/product/73613c6e-c550-40d5-b12b-a9ee88223b3d",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"reviews",
+								"product",
+								"73613c6e-c550-40d5-b12b-a9ee88223b3d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[GET] Reviews by Product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{path}}/api/reviews/product/73613c6e-c550-40d5-b12b-a9ee88223b3d",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"reviews",
+										"product",
+										"73613c6e-c550-40d5-b12b-a9ee88223b3d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 22:15:07 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 22:15:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"uuid\": \"740ec7a8-6f54-4fee-84a2-154d6b8b9936\",\n            \"user_id\": 1,\n            \"product_id\": 1,\n            \"subject\": \"Boa\",\n            \"comment\": \"Gostei muito\",\n            \"rating\": 8.5,\n            \"created_at\": \"2023-06-27T22:03:42.000000Z\",\n            \"updated_at\": \"2023-06-27T22:03:42.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"uuid\": \"4594e971-6d70-47e4-9b22-ce49e229d95f\",\n            \"user_id\": 1,\n            \"product_id\": 1,\n            \"subject\": \"Ruim\",\n            \"comment\": \"Bleeeh ruim dimais\",\n            \"rating\": 3,\n            \"created_at\": \"2023-06-27T22:05:23.000000Z\",\n            \"updated_at\": \"2023-06-27T22:05:23.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "[STORE] Reviews",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"subject\": \"Ruim\",\r\n  \"comment\": \"Bleeeh ruim dimais\",\r\n  \"rating\": 3.0,\r\n  \"product_id\": \"73613c6e-c550-40d5-b12b-a9ee88223b3d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/api/reviews",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"reviews"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[STORE] Reviews",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"subject\": \"Ruim\",\r\n  \"comment\": \"Bleeeh ruim dimais\",\r\n  \"rating\": 3.0,\r\n  \"product_id\": \"73613c6e-c550-40d5-b12b-a9ee88223b3d\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}/api/reviews",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"reviews"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 22:05:23 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 22:05:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Avaliação criada.\",\n    \"data\": {\n        \"subject\": \"Ruim\",\n        \"product_id\": 1,\n        \"rating\": 3,\n        \"comment\": \"Bleeeh ruim dimais\",\n        \"user_id\": 1,\n        \"uuid\": \"4594e971-6d70-47e4-9b22-ce49e229d95f\",\n        \"updated_at\": \"2023-06-27T22:05:23.000000Z\",\n        \"created_at\": \"2023-06-27T22:05:23.000000Z\",\n        \"id\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "[DELETE] Reviews",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path}}/api/reviews/:id",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"api",
+								"reviews",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "740ec7a8-6f54-4fee-84a2-154d6b8b9936",
+									"description": "UUID de Produto"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[DELETE] Products",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{path}}/api/products/:id",
+									"host": [
+										"{{path}}"
+									],
+									"path": [
+										"api",
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "20ee9260-d69b-4074-9c75-fdb79136b62b",
+											"description": "UUID de Produto"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 16:17:43 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 16:17:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Produto deletado\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "path",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODc5MDMyNDksImV4cCI6MTY4NzkwNjg0OSwibmJmIjoxNjg3OTAzMjQ5LCJqdGkiOiJSWDRwVjdXTXlnVVh2cUZCIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UbuNlhPL5Kvu4fLuSztSpCghHHJMmXLd2Yon02oJBos",
+			"type": "string"
+		}
+	]
+}
