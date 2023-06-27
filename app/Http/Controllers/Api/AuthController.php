@@ -45,7 +45,9 @@ class AuthController extends Controller
             'username.regex' => 'O nome de usuário pode conter apenas letras, números ou _'
         ]);
 
-        $data['password'] = Hash::make($data['password']);
+        if (isset($data['password'])) {
+            $data['password'] = Hash::make($data['password']);
+        }
 
         try {
 
