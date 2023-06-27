@@ -20,6 +20,7 @@ $ php artisan serve
 #### O servidor normalmente irá se iniciar na url [http://127.0.0.1:8000]
 
 ### Os endpoints com seus respectivos testes estarão na pasta docs, foi utilizado o Postman
+### Para testar endpoints que necessitam de autenticação, realize o login no endpoint de login, copie o token e coloque ele na variável de token 
 
 ### Para as funções de admnistrador, use o usuário administrator do banco de dados após o seed ou modifique o type do seu usuário no banco para "admin"
 

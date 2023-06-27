@@ -681,7 +681,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"administrator\",\r\n    \"password\": \"teste1234\"\r\n}",
+							"raw": "{\r\n    \"username\": \"usuario_teste1\",\r\n    \"password\": \"teste1234\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -862,7 +862,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Usuário Teste\",\r\n    \"username\": \"teste_usuario\",\r\n    \"email\": \"teste_usuario@teste.com\",\r\n    \"password\": \"teste1234\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Usuário Teste\",\r\n    \"username\": \"usuario_teste1\",\r\n    \"email\": \"teste1@teste.com\",\r\n    \"password\": \"teste1234\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -906,7 +906,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"ADMUDADO\",\r\n    \"username\": \"ADMUDADO\",\r\n    \"email\": \"ADMUDADO@teste.com\",\r\n    \"password\": \"teste123\"\r\n}",
+							"raw": "{\r\n    \"name\": \"teste 2\",\r\n    \"username\": \"teste2222\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -950,7 +950,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"type\": \"admin\",\r\n    \"user_id\": 2\r\n}",
+							"raw": "{\r\n    \"type\": \"admin\",\r\n    \"user_id\": 3\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1090,21 +1090,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{path}}/api/categories/:id/products",
+							"raw": "{{path}}/api/categories",
 							"host": [
 								"{{path}}"
 							],
 							"path": [
 								"api",
-								"categories",
-								":id",
-								"products"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
+								"categories"
 							]
 						}
 					},
@@ -1241,7 +1233,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "f5157c2b-ff84-4e6d-a81c-aa1e4a77ada9",
+									"value": "be4284da-1bdc-4d48-800e-520b16bedaed",
 									"description": "UUID de Categoria"
 								}
 							]
@@ -1371,7 +1363,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "f5157c2b-ff84-4e6d-a81c-aa1e4a77ada9",
+									"value": "be4284da-1bdc-4d48-800e-520b16bedaed",
 									"description": "UUID de Categoria"
 								}
 							]
@@ -1793,7 +1785,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "20ee9260-d69b-4074-9c75-fdb79136b62b",
+									"value": "24c2f03a-53c0-46c2-94f9-55c6f6531b4c",
 									"description": "UUID de Produto"
 								}
 							]
