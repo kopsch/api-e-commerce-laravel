@@ -21,7 +21,7 @@ $ php artisan serve
 
 ### Os endpoints com seus respectivos testes estarão na pasta docs, foi utilizado o Postman
 
-### Para as funções de admnistrador, use o usuário administrator do banco de dados após o seed
+### Para as funções de admnistrador, use o usuário administrator do banco de dados após o seed ou modifique o type do seu usuário no banco para "admin"
 
 #Integrantes:
 1. Gustavo Vicente Ozorio
