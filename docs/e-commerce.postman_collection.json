@@ -681,7 +681,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"usuario_teste1\",\r\n    \"password\": \"teste1234\"\r\n}",
+							"raw": "{\r\n    \"username\": \"administrator\",\r\n    \"password\": \"teste1234\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
