@@ -37,10 +37,10 @@ class AuthController extends Controller
         $id = auth('api')->id();
 
         $data = $this->validate($request, [
-            'name' => 'required|min:3|max:50',
-            'username' => 'required|regex:/^[A-Za-z0-9_]+$/|min:6|max:20|unique:users,username,NULL,id,deleted_at,NULL',
-            'email' => 'required|email|unique:users,email,NULL,id,deleted_at,NULL',
-            'password' => 'required|min:8|max:30'
+            'name' => 'nullable|min:3|max:50',
+            'username' => 'nullable|regex:/^[A-Za-z0-9_]+$/|min:6|max:20|unique:users,username,NULL,id,deleted_at,NULL',
+            'email' => 'nullable|email|unique:users,email,NULL,id,deleted_at,NULL',
+            'password' => 'nullable|min:8|max:30'
         ], [
             'username.regex' => 'O nome de usuário pode conter apenas letras, números ou _'
         ]);
